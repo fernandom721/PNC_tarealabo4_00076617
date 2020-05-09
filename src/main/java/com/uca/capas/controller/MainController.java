@@ -2,6 +2,7 @@ package com.uca.capas.controller;
 
 
 import com.uca.capas.domain.Producto;
+import com.uca.capas.domain.Robot;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -28,6 +29,19 @@ public class MainController {
         ModelAndView mav = new ModelAndView();
         if(result.hasErrors()){
             mav.setViewName("index");
+        }else {
+            Robot robot = new Robot();
+            mav.addObject("robot",robot);
+            mav.setViewName("robot");
+        }
+        return mav;
+    }
+
+    @RequestMapping("/seguridad")
+    public ModelAndView formseguridad(@Valid @ModelAttribute Robot robot, BindingResult result){
+        ModelAndView mav = new ModelAndView();
+        if(result.hasErrors()){
+            mav.setViewName("robot");
         }else {
             mav.setViewName("exito");
         }
