@@ -1,10 +1,11 @@
 package com.uca.capas.domain;
 
+import javax.validation.constraints.AssertFalse;
 import javax.validation.constraints.AssertTrue;
 
 public class Robot {
 
-    @AssertTrue(message = "Eres robot")
+    @AssertFalse(message = "!!!!Eres robot!!!!")
     private Boolean soyRobot;
 
     public Robot(){}

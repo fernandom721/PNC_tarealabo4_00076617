@@ -1,0 +1,26 @@
+body{
+    background-color: cyan;
+}
+#boton{
+    background-color: cadetblue;
+    border-style: solid;
+    border-color: black;
+    border-radius: 15px;
+}
+#formulario
+{
+    text-align: right;
+    width: 400px;
+    border-radius: 15px;
+    margin-top: 50px;
+}
+input{
+    background-color: transparent;
+}
+form{
+    text-align: right;
+}
+#back{
+    color: black;
+    text-underline: none;
+}

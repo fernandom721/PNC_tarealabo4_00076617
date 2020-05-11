@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
     <title>index</title>
 </head>
 <body>
-<h1>Ingrese un producto</h1>
+<h1 align="center">Ingrese un producto</h1>
 
-<form th:action="@{/formproducto}" th:object="${producto}" method="post">
-    <label>Nombre del producto:</label>
-    <input type="text" th:field="*{nombre}">
-    <span th:errors="*{nombre}" style=color:#FF0000></span><br>
-    <label>Descripcion:</label>
-    <input type="text" th:field="*{descripcion}">
-    <span th:errors="*{descripcion}" style=color:#FF0000></span><br>
-    <label>Precio del producto:</label>
-    <input type="number" th:field="*{precio}">
-    <span th:errors="*{precio}" style=color:#FF0000></span><br>
-    <label>Fecha de Vencimiento:</label>
-    <input type="text" th:field="*{fvencimiento}">
-    <span th:errors="*{fvencimiento}" style=color:#FF0000></span><br>
-    <input type="submit" value="Agregar">
-</form>
+<div class="form-group"  align="center" id="form">
+    <form th:action="@{/formproducto}" th:object="${producto}" method="post">
+        <label>Nombre del producto:</label>
+        <input type="text" th:field="*{nombre}" class="dato"><br>
+        <span th:errors="*{nombre}" style=color:#FF0000></span><br>
+        <label>Descripcion:</label>
+        <input type="text" th:field="*{descripcion}" class="dato"><br>
+        <span th:errors="*{descripcion}" style=color:#FF0000></span><br>
+        <label>Precio del producto:</label>
+        <input type="number" th:field="*{precio}" class="dato"><br>
+        <span th:errors="*{precio}" style=color:#FF0000></span><br>
+        <label>Fecha de Vencimiento:</label>
+        <input type="text" th:field="*{fvencimiento}" class="dato"><br>
+        <span th:errors="*{fvencimiento}" style=color:#FF0000></span><br>
+        <input type="submit" value="Agregar" id="boton" class="cl-sm-12">
+    </form>
+
+</div>
 
 </body>
 </html>

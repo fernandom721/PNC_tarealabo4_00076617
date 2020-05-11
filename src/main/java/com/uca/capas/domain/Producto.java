@@ -13,7 +13,7 @@ public class Producto {
     @Min(value = 0, message = "El precio no debe de ser negativo")
     private int precio;
     @NotEmpty(message = "Este campo no puede estar vacio")
-    @Pattern(regexp = "^([0-2][0-9]|(3)[0-1])(\\/)(((0)[0-9])|((1)[0-2]))(\\/)\\d{4}$", message = "el forato debe ser dd/mm/yyyy")
+    @Pattern(regexp = "^([0-2][0-9]|(3)[0-1])(\\/)(((0)[0-9])|((1)[0-2]))(\\/)\\d{4}$", message = "el formato debe ser dd/mm/yyyy")
     private String fvencimiento;
 
     public Producto(){}

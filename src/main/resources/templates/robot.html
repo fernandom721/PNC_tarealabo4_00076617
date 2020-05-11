@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="robot.css">
     <meta charset="UTF-8">
     <title>validacion</title>
 </head>
 <body>
-<h1>Validacion anti Robots</h1>
-<form th:action="@{/seguridad}" th:object="${robot}" method="post">
-    <h2>Eres un robot</h2><br>
-    <input type="radio" th:field="*{soyRobot}" th:value="false">
-    <span th:errors="*{soyRobot}" style=color:#FF0000></span><br>
-    <input type="submit" value="Validar">
-</form>
-<a href="/producto">Regresar</a>
+<h1 align="center">Validacion anti Robots</h1>
+<div class="row">
+    <div class="col-sm-6" id="formulario">
+        <form th:action="@{/seguridad}" th:object="${robot}" method="post">
+            <br>
+            <label>Eres un robot?</label><input type="radio" th:field="*{soyRobot}" th:value="true">
+            <span th:errors="*{soyRobot}" style=color:#FF0000></span><br>
+            <input type="submit" value="Validar" id="boton">
+        </form>
+        <a href="/producto" id="back">Regresar</a>
+    </div>
+    <div class="col-sm-6" id="imagen">
+        <img src="images/01.png"/>
+    </div>
+</div>
+
 
 </body>
 </html>
